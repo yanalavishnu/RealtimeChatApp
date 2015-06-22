@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <base href="/">
+        <meta charset="UTF-8">
+        <title>Chat Application</title>
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/bootstrap.css" rel ="stylesheet">
+    </head>
+    <body ng-app="chatApp">
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        Chat Application
+                    </a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div ng-view="" id ="view"></div>
+    </body>
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="javascripts/bootstrap.js"></script>
+    <script src="javascripts/angular.js"></script>
+    <script src="javascripts/angular-cookies.js"></script>
+    <script src="javascripts/angular-route.js"></script>
+    <script src="javascripts/socket.io-1.2.1.js"></script>
+    <script src="app.js"></script>
+    <script src="factories/socket.js"></script>
+    <script src="controllers/homeCtrl.js"></script>
+    <script src="controllers/messageCtrl.js"></script>
+</html>

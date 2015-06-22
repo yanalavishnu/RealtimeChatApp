@@ -1,0 +1,25 @@
+angular.module("chatApp",
+    [
+        'ngCookies',
+        'ngRoute'
+    ]
+    ).config(function($routeProvider,$locationProvider,$httpProvider){
+        $routeProvider
+            .when("/",{
+                templateUrl:"partials/home.html",
+                controller:"homeCtrl"
+            })
+            .when("/message",{
+                templateUrl:"partials/messages.html",
+                controller:"messageCtrl"
+            })
+            .when("/message/:user",{
+                templateUrl:"partials/messages.html",
+                controller:"messageCtrl"
+            })
+            .otherwise({
+                redirectTo:"/"
+            });
+
+        $locationProvider.html5Mode(true);
+    });

@@ -1,0 +1,33 @@
+{
+  "name": "realtime",
+  "version": "0.1.0",
+  "description": "chat Application",
+  "main": "bin/server.js",
+  
+  "dependencies":{
+  	"express": "~4.0.0",
+  	"body-parser": "~1.6.3",
+  	"cookie-parser": "~1.0.1",
+  	"ejs": "*",
+  	"ejs-locals": "*",
+  	"lodash": "^2.4.1",
+	"mongoose": "*",
+	"mongoose-timestamp": "0.2.1",
+	"mongoose-validator": "0.2.2",
+	"redis": "*",
+	"socket.io": "^1.1.0",
+	"config": "*",
+    "mongoose-unique-validator":"*",
+    "ffmpeg":"0.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bin/server.js"
+  },
+  "keywords": [
+    "chat",
+    "realtime"
+  ],
+  "author": "vishnu",
+  "license": "BSD-2-Clause"
+}

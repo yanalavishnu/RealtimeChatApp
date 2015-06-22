@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="chatUsers col-md-3 col-sm-3">
+            <div class="list-group">
+                <a class="list-group-item" ng-repeat="user in users" ng-click="go('/message/'+user)" ng-class="{'active':user==userName}">
+                    <span class="glyphicon glyphicon-user"></span> {{user}} <span class="badge">{{badges[user]}}</span>
+                </a>
+            </div>
+        </div>
+        <div class="chatBody col col-md-8 col-sm-8">
+            <div ng-repeat="message in messages" class="row">
+                <div class="message" ng-class="{'right':message.from != userName, 'left':message.from == userName,'online':message.online,'offline':message.offline}">
+                    <span class="label label-info" ng-if="message.from == userName">{{message.from}}</span> {{message.text}}
+                    <sub class="time">{{message.time | date : 'hh:mm:ssa'}}</sub>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-3 col-sm-3"></div>
+        <div class="col-md-8 col-sm-8" style="padding-left: 0px;padding-right: 0px;">
+            <form ng-submit="send()">
+                <div class="input-group">
+                    <input type="text" class="form-control" ng-model="message" placeholder="Enter your message" ng-change="change()">
+                      <span class="input-group-btn">
+                        <button class="btn btn-info" type="submit">
+                            <i class="glyphicon glyphicon-send"></i>&nbsp; Send</button>
+                      </span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="notification">
+    <p>{{notification.from}} : {{notification.text}}</p>
+</div>

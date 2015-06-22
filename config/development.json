@@ -1,0 +1,12 @@
+{
+    "port":8081,
+    "mongodb":{
+        "uri":"mongodb://localhost:27017/realtime"
+    },
+    "redis":{
+        "host":"127.0.0.1",
+        "port":6379,
+        "pass":""
+    }
+
+}
