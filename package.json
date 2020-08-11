@@ -10,7 +10,7 @@
   	"cookie-parser": "~1.0.1",
   	"ejs": "*",
   	"ejs-locals": "*",
-  	"lodash": "^2.4.1",
+  	"lodash": "^4.17.19",
 	"mongoose": "*",
 	"mongoose-timestamp": "0.2.1",
 	"mongoose-validator": "0.2.2",
